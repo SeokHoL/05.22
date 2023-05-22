@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changImge(){
+            var select1 = document.getElementById("fruit");
+            var img1 =document.getElementById("imgFruit");
+
+            var path = select1.options[select1.selectedIndex].value; //배열임//select1.selectedIndex 는 클릭했을때 인덱스 번호가 바뀜
+            img1.src=path;                                                                  
+            img1.width =400;
+            img1.height =350;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <select  id="fruit">
+            <option value="imgs/peaches.jpg">복숭아</option>
+            <option value="imgs/kiwi.jpg">키위</option>
+            <option value="imgs/orange.jpg">오렌지</option>
+            <option value="imgs/apple.jpg">사과</option>
+        </select>
+        <button id="btn" onclick="changImge()" type="button">과일선택후 클림</button>
+        <br>
+        <img  id="imgFruit" src="imgs/peaches.jpg">
+    </form>
+    
+    
+</body>
+</html>
